@@ -1,0 +1,225 @@
+[
+  {
+    "@id": "http://example.com/meeting",
+    "http://example.com/ontology/location": [
+      {
+        "@id": "http://example.com/france"
+      }
+    ],
+    "http://example.com/ontology/month": [
+      {
+        "@value": "August"
+      }
+    ],
+    "http://example.com/ontology/persons": [
+      {
+        "@id": "_:N68ea50c7c9914e93beab640b3565d993"
+      }
+    ],
+    "http://example.com/ontology/year": [
+      {
+        "@value": 2014
+      }
+    ]
+  },
+  {
+    "@id": "_:N68ea50c7c9914e93beab640b3565d993",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+    ],
+    "http://example.com/ontology/persons": [
+      {
+        "@id": "http://example.com/Emma"
+      },
+      {
+        "@id": "http://example.com/Keid"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.com/Emma",
+    "http://example.com/ontology/address": [
+      {
+        "@value": "Carrer de la Guardia Civil 20, 46020 Valencia, Spain"
+      }
+    ],
+    "http://example.com/ontology/date_of_graduation": [
+      {
+        "@value": 2015
+      }
+    ],
+    "http://example.com/ontology/degree": [
+      {
+        "@id": "http://example.com/master"
+      }
+    ],
+    "http://example.com/ontology/field_of_knowledge": [
+      {
+        "@id": "_:Nf8af447e31024d088494c50eb164b16b"
+      }
+    ],
+    "http://example.com/ontology/speciality": [
+      {
+        "@id": "http://example.com/сhemist"
+      }
+    ],
+    "http://example.com/ontology/university": [
+      {
+        "@id": "http://example.com/valencia_university"
+      }
+    ],
+    "http://example.com/ontology/visited_countries": [
+      {
+        "@id": "_:N431eaad5d7d04b1eaf51982ce5c28dde"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@id": "_:Ne78c51bae9a24c08ac72672c347ab0a7"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf8af447e31024d088494c50eb164b16b",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+    ],
+    "http://example.com/ontology/field_of_knowledge": [
+      {
+        "@value": "waste management"
+      },
+      {
+        "@value": "toxic waste"
+      },
+      {
+        "@value": "air pollution"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne78c51bae9a24c08ac72672c347ab0a7",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@value": "riding"
+      },
+      {
+        "@value": "bikes"
+      },
+      {
+        "@value": "music"
+      },
+      {
+        "@value": "travel"
+      }
+    ]
+  },
+  {
+    "@id": "_:N431eaad5d7d04b1eaf51982ce5c28dde",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
+    ],
+    "http://example.com/ontology/visited_countries": [
+      {
+        "@id": "http://example.com/portugal"
+      },
+      {
+        "@id": "http://example.com/italy"
+      },
+      {
+        "@id": "http://example.com/france"
+      },
+      {
+        "@id": "http://example.com/germany"
+      },
+      {
+        "@id": "http://example.com/denmark"
+      },
+      {
+        "@id": "http://example.com/sweden"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.com/Keid",
+    "http://example.com/ontology/address": [
+      {
+        "@value": "1516 Henry Street, Берклі, Каліфорнія 94709, США"
+      }
+    ],
+    "http://example.com/ontology/date_of_graduation": [
+      {
+        "@value": 2011
+      }
+    ],
+    "http://example.com/ontology/degree": [
+      {
+        "@id": "http://example.com/bachelor"
+      }
+    ],
+    "http://example.com/ontology/speciality": [
+      {
+        "@id": "http://example.com/biologist"
+      }
+    ],
+    "http://example.com/ontology/university": [
+      {
+        "@id": "http://example.com/сalifornia_university"
+      }
+    ],
+    "http://example.com/ontology/visited_countries": [
+      {
+        "@id": "_:Neb61c8cc654a4a319db8afa8cab6965a"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@id": "_:N51224fbe1e544a70a7c0598745b7f9f4"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/knows": [
+      {
+        "@id": "http://example.com/Emma"
+      }
+    ]
+  },
+  {
+    "@id": "_:N51224fbe1e544a70a7c0598745b7f9f4",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@value": "birds"
+      },
+      {
+        "@value": "ecology"
+      },
+      {
+        "@value": "photography"
+      },
+      {
+        "@value": "travel"
+      },
+      {
+        "@value": "environment"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neb61c8cc654a4a319db8afa8cab6965a",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
+    ],
+    "http://example.com/ontology/visited_countries": [
+      {
+        "@id": "http://example.com/canada"
+      },
+      {
+        "@id": "http://example.com/france"
+      }
+    ]
+  }
+]

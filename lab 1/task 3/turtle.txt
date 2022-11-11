@@ -1,0 +1,51 @@
+@prefix ns1: <http://example.com/ontology/> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/meeting> ns1:location <http://example.com/france> ;
+    ns1:month "August" ;
+    ns1:persons [ a rdf:Bag ;
+            ns1:persons <http://example.com/Emma>,
+                <http://example.com/Keid> ] ;
+    ns1:year 2014 .
+
+<http://example.com/Keid> ns1:address "1516 Henry Street, Берклі, Каліфорнія 94709, США"^^xsd:string ;
+    ns1:date_of_graduation 2011 ;
+    ns1:age 36;
+    ns1:degree <http://example.com/bachelor> ;
+    ns1:speciality <http://example.com/biologist> ;
+    ns1:university <http://example.com/сalifornia_university> ;
+    ns1:visited_countries [ a rdf:Seq ;
+            ns1:visited_countries <http://example.com/canada>,
+                <http://example.com/france>, <http://example.com/germany> ] ;
+    ns2:interest [ a rdf:Bag ;
+            ns2:interest "birds"^^xsd:string,
+                "ecology"^^xsd:string,
+                "environment"^^xsd:string,
+                "photography"^^xsd:string,
+                "travel"^^xsd:string ] ;
+    ns2:knows <http://example.com/Emma> .
+
+<http://example.com/Emma> ns1:address "Carrer de la Guardia Civil 20, 46020 Valencia, Spain"^^xsd:string ;
+    ns1:date_of_graduation 2015 ;
+    ns1:degree <http://example.com/master> ;
+    ns1:field_of_knowledge [ a rdf:Bag ;
+            ns1:field_of_knowledge "air pollution",
+                "toxic waste",
+                "waste management" ] ;
+    ns1:speciality <http://example.com/сhemist> ;
+    ns1:university <http://example.com/valencia_university> ;
+    ns1:visited_countries [ a rdf:Seq ;
+            ns1:visited_countries <http://example.com/denmark>,
+                <http://example.com/france>,
+                <http://example.com/germany>,
+                <http://example.com/italy>,
+                <http://example.com/portugal>,
+                <http://example.com/sweden> ] ;
+    ns2:interest [ a rdf:Bag ;
+            ns2:interest "bikes"^^xsd:string,
+                "music"^^xsd:string,
+                "riding"^^xsd:string,
+                "travel"^^xsd:string ] .
+
