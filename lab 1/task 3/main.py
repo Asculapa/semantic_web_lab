@@ -8,7 +8,6 @@
 # велосипеді, музика та подорожі. Вона відвідала Португалію, Італію, Францію, Німеччину,
 # Данію та Швецію.
 # Кейд знає Емму. Вони зустрілися в Парижі в серпні 2014 року.
-
 # • використовуючі словники FOAF, RDF, XSD тощо та власні URI (наприклад,
 # створені на базі http://example.org/) створіть RDF граф за допомогою RDFLib;
 # • виконайте візуалізацію та сериалізацію графу у різні формати;
@@ -49,6 +48,7 @@ date_of_graduation = URIRef('http://example.com/ontology/date_of_graduation')
 visited_countries = URIRef('http://example.com/ontology/visited_countries')
 
 graph.add((keid, address, Literal('1516 Henry Street, Берклі, Каліфорнія 94709, США', datatype=XSD.string)))
+graph.add((keid, FOAF.name, Literal('Keid', datatype=XSD.string)))
 graph.add((keid, degree, bachelor))
 graph.add((keid, speciality, biologist))
 graph.add((keid, university, сalifornia_university))
@@ -86,6 +86,7 @@ month = URIRef('http://example.com/ontology/month')
 year = URIRef('http://example.com/ontology/year')
 persons = URIRef('http://example.com/ontology/persons')
 
+graph.add((emma, FOAF.name, Literal('Emma', datatype=XSD.string)))
 graph.add((emma, address, Literal('Carrer de la Guardia Civil 20, 46020 Valencia, Spain', datatype=XSD.string)))
 graph.add((emma, degree, master))
 graph.add((emma, speciality, сhemist))
@@ -129,26 +130,24 @@ graph.add((bag, RDF.type, RDF.Bag))
 graph.add((bag, persons, emma))
 graph.add((bag, persons, keid))
 
-# • використовуючі словники FOAF, RDF, XSD тощо та власні URI (наприклад,
-# створені на базі http://example.org/) створіть RDF граф за допомогою RDFLib;
-# • запишіть свій граф у файл у форматі TURTLE;
-# • перегляньте файл і відредагуйте його так, щоб Кейд також відвідував Німеччину і
-# щоб Еммі було 36 років;
-# • виведіть на консоль усі трійки графу;
-# • виведіть на консоль трійки, що стосуються лише про Емму;
-# • виведіть на консоль трійки, що містять імена людей.
-
-# • виконайте візуалізацію та сериалізацію графу у різні формати;
-
 graph.serialize(destination='turtle.txt', format='turtle')
 graph.serialize(destination='json.txt', format='json-ld')
 graph.serialize(destination='pretty.txt', format='pretty-xml')
 
-print('Subjects:')
-print(graph.subjects())
+print('All triples')
+for s, p, o in graph.triples((None, None, None)):
+    print("s: " + str(s))
+    print("p: " + str(p))
+    print("o: " + str(o))
 
-print('Predicates:')
-print(graph.predicates())
+print('Emma triples')
+for s, p, o in graph.triples((emma, None, None)):
+    print("s: " + str(s))
+    print("p: " + str(p))
+    print("o: " + str(o))
 
-print('Objects:')
-print(graph.objects())
+print('Emma with names')
+for s, p, o in graph.triples((None, FOAF.name, None)):
+    print("s: " + str(s))
+    print("p: " + str(p))
+    print("o: " + str(o))

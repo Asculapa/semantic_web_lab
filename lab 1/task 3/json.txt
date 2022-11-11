@@ -1,42 +1,5 @@
 [
   {
-    "@id": "http://example.com/meeting",
-    "http://example.com/ontology/location": [
-      {
-        "@id": "http://example.com/france"
-      }
-    ],
-    "http://example.com/ontology/month": [
-      {
-        "@value": "August"
-      }
-    ],
-    "http://example.com/ontology/persons": [
-      {
-        "@id": "_:N68ea50c7c9914e93beab640b3565d993"
-      }
-    ],
-    "http://example.com/ontology/year": [
-      {
-        "@value": 2014
-      }
-    ]
-  },
-  {
-    "@id": "_:N68ea50c7c9914e93beab640b3565d993",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
-    ],
-    "http://example.com/ontology/persons": [
-      {
-        "@id": "http://example.com/Emma"
-      },
-      {
-        "@id": "http://example.com/Keid"
-      }
-    ]
-  },
-  {
     "@id": "http://example.com/Emma",
     "http://example.com/ontology/address": [
       {
@@ -55,7 +18,7 @@
     ],
     "http://example.com/ontology/field_of_knowledge": [
       {
-        "@id": "_:Nf8af447e31024d088494c50eb164b16b"
+        "@id": "_:N18df4d247f76434e841c6e1d91c79fd5"
       }
     ],
     "http://example.com/ontology/speciality": [
@@ -70,17 +33,22 @@
     ],
     "http://example.com/ontology/visited_countries": [
       {
-        "@id": "_:N431eaad5d7d04b1eaf51982ce5c28dde"
+        "@id": "_:N256f2e5ec2744f06b50c683727e37557"
       }
     ],
     "http://xmlns.com/foaf/0.1/interest": [
       {
-        "@id": "_:Ne78c51bae9a24c08ac72672c347ab0a7"
+        "@id": "_:N3812a838bf4c48ccbed1a02da679fd26"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Emma"
       }
     ]
   },
   {
-    "@id": "_:Nf8af447e31024d088494c50eb164b16b",
+    "@id": "_:N18df4d247f76434e841c6e1d91c79fd5",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
     ],
@@ -97,7 +65,7 @@
     ]
   },
   {
-    "@id": "_:Ne78c51bae9a24c08ac72672c347ab0a7",
+    "@id": "_:N3812a838bf4c48ccbed1a02da679fd26",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
     ],
@@ -117,7 +85,7 @@
     ]
   },
   {
-    "@id": "_:N431eaad5d7d04b1eaf51982ce5c28dde",
+    "@id": "_:N256f2e5ec2744f06b50c683727e37557",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
     ],
@@ -171,22 +139,27 @@
     ],
     "http://example.com/ontology/visited_countries": [
       {
-        "@id": "_:Neb61c8cc654a4a319db8afa8cab6965a"
+        "@id": "_:N6500965c2a114b2494903b33972276f9"
       }
     ],
     "http://xmlns.com/foaf/0.1/interest": [
       {
-        "@id": "_:N51224fbe1e544a70a7c0598745b7f9f4"
+        "@id": "_:N50bdfdb391b5435dbe2c4ffaa22845a1"
       }
     ],
     "http://xmlns.com/foaf/0.1/knows": [
       {
         "@id": "http://example.com/Emma"
       }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Keid"
+      }
     ]
   },
   {
-    "@id": "_:N51224fbe1e544a70a7c0598745b7f9f4",
+    "@id": "_:N50bdfdb391b5435dbe2c4ffaa22845a1",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
     ],
@@ -209,7 +182,7 @@
     ]
   },
   {
-    "@id": "_:Neb61c8cc654a4a319db8afa8cab6965a",
+    "@id": "_:N6500965c2a114b2494903b33972276f9",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
     ],
@@ -219,6 +192,43 @@
       },
       {
         "@id": "http://example.com/france"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.com/meeting",
+    "http://example.com/ontology/location": [
+      {
+        "@id": "http://example.com/france"
+      }
+    ],
+    "http://example.com/ontology/month": [
+      {
+        "@value": "August"
+      }
+    ],
+    "http://example.com/ontology/persons": [
+      {
+        "@id": "_:Ne1c7725d06594fae89b49afffd9621e6"
+      }
+    ],
+    "http://example.com/ontology/year": [
+      {
+        "@value": 2014
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne1c7725d06594fae89b49afffd9621e6",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+    ],
+    "http://example.com/ontology/persons": [
+      {
+        "@id": "http://example.com/Emma"
+      },
+      {
+        "@id": "http://example.com/Keid"
       }
     ]
   }

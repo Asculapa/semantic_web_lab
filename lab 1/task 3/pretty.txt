@@ -1,60 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:ns1="http://example.com/ontology/"
   xmlns:ns2="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://example.com/meeting">
     <ns1:location rdf:resource="http://example.com/france"/>
     <ns1:month>August</ns1:month>
     <ns1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</ns1:year>
     <ns1:persons>
-      <rdf:Bag rdf:nodeID="N68ea50c7c9914e93beab640b3565d993">
+      <rdf:Bag rdf:nodeID="Ne1c7725d06594fae89b49afffd9621e6">
         <ns1:persons rdf:resource="http://example.com/Emma"/>
         <ns1:persons rdf:resource="http://example.com/Keid"/>
       </rdf:Bag>
     </ns1:persons>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/Emma">
-    <ns1:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrer de la Guardia Civil 20, 46020 Valencia, Spain</ns1:address>
-    <ns1:degree rdf:resource="http://example.com/master"/>
-    <ns1:speciality rdf:resource="http://example.com/сhemist"/>
-    <ns1:university rdf:resource="http://example.com/valencia_university"/>
-    <ns1:date_of_graduation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ns1:date_of_graduation>
-    <ns1:field_of_knowledge>
-      <rdf:Bag rdf:nodeID="Nf8af447e31024d088494c50eb164b16b">
-        <ns1:field_of_knowledge>waste management</ns1:field_of_knowledge>
-        <ns1:field_of_knowledge>toxic waste</ns1:field_of_knowledge>
-        <ns1:field_of_knowledge>air pollution</ns1:field_of_knowledge>
-      </rdf:Bag>
-    </ns1:field_of_knowledge>
-    <ns2:interest>
-      <rdf:Bag rdf:nodeID="Ne78c51bae9a24c08ac72672c347ab0a7">
-        <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">riding</ns2:interest>
-        <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bikes</ns2:interest>
-        <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</ns2:interest>
-        <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">travel</ns2:interest>
-      </rdf:Bag>
-    </ns2:interest>
-    <ns1:visited_countries>
-      <rdf:Seq rdf:nodeID="N431eaad5d7d04b1eaf51982ce5c28dde">
-        <ns1:visited_countries rdf:resource="http://example.com/portugal"/>
-        <ns1:visited_countries rdf:resource="http://example.com/italy"/>
-        <ns1:visited_countries rdf:resource="http://example.com/france"/>
-        <ns1:visited_countries rdf:resource="http://example.com/germany"/>
-        <ns1:visited_countries rdf:resource="http://example.com/denmark"/>
-        <ns1:visited_countries rdf:resource="http://example.com/sweden"/>
-      </rdf:Seq>
-    </ns1:visited_countries>
-  </rdf:Description>
   <rdf:Description rdf:about="http://example.com/Keid">
     <ns1:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1516 Henry Street, Берклі, Каліфорнія 94709, США</ns1:address>
+    <ns2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keid</ns2:name>
     <ns1:degree rdf:resource="http://example.com/bachelor"/>
     <ns1:speciality rdf:resource="http://example.com/biologist"/>
     <ns1:university rdf:resource="http://example.com/сalifornia_university"/>
     <ns1:date_of_graduation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ns1:date_of_graduation>
     <ns2:interest>
-      <rdf:Bag rdf:nodeID="N51224fbe1e544a70a7c0598745b7f9f4">
+      <rdf:Bag rdf:nodeID="N50bdfdb391b5435dbe2c4ffaa22845a1">
         <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birds</ns2:interest>
         <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecology</ns2:interest>
         <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photography</ns2:interest>
@@ -63,11 +32,45 @@
       </rdf:Bag>
     </ns2:interest>
     <ns1:visited_countries>
-      <rdf:Seq rdf:nodeID="Neb61c8cc654a4a319db8afa8cab6965a">
+      <rdf:Seq rdf:nodeID="N6500965c2a114b2494903b33972276f9">
         <ns1:visited_countries rdf:resource="http://example.com/canada"/>
         <ns1:visited_countries rdf:resource="http://example.com/france"/>
       </rdf:Seq>
     </ns1:visited_countries>
-    <ns2:knows rdf:resource="http://example.com/Emma"/>
+    <ns2:knows>
+      <rdf:Description rdf:about="http://example.com/Emma">
+        <ns2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emma</ns2:name>
+        <ns1:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrer de la Guardia Civil 20, 46020 Valencia, Spain</ns1:address>
+        <ns1:degree rdf:resource="http://example.com/master"/>
+        <ns1:speciality rdf:resource="http://example.com/сhemist"/>
+        <ns1:university rdf:resource="http://example.com/valencia_university"/>
+        <ns1:date_of_graduation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ns1:date_of_graduation>
+        <ns1:field_of_knowledge>
+          <rdf:Bag rdf:nodeID="N18df4d247f76434e841c6e1d91c79fd5">
+            <ns1:field_of_knowledge>waste management</ns1:field_of_knowledge>
+            <ns1:field_of_knowledge>toxic waste</ns1:field_of_knowledge>
+            <ns1:field_of_knowledge>air pollution</ns1:field_of_knowledge>
+          </rdf:Bag>
+        </ns1:field_of_knowledge>
+        <ns2:interest>
+          <rdf:Bag rdf:nodeID="N3812a838bf4c48ccbed1a02da679fd26">
+            <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">riding</ns2:interest>
+            <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bikes</ns2:interest>
+            <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</ns2:interest>
+            <ns2:interest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">travel</ns2:interest>
+          </rdf:Bag>
+        </ns2:interest>
+        <ns1:visited_countries>
+          <rdf:Seq rdf:nodeID="N256f2e5ec2744f06b50c683727e37557">
+            <ns1:visited_countries rdf:resource="http://example.com/portugal"/>
+            <ns1:visited_countries rdf:resource="http://example.com/italy"/>
+            <ns1:visited_countries rdf:resource="http://example.com/france"/>
+            <ns1:visited_countries rdf:resource="http://example.com/germany"/>
+            <ns1:visited_countries rdf:resource="http://example.com/denmark"/>
+            <ns1:visited_countries rdf:resource="http://example.com/sweden"/>
+          </rdf:Seq>
+        </ns1:visited_countries>
+      </rdf:Description>
+    </ns2:knows>
   </rdf:Description>
 </rdf:RDF>
