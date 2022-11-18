@@ -1,0 +1,18 @@
+1. Напишіть SPARQL запит, який буде повертати чисельність населення кожної з країн
+Східної Європи. Результат запиту необхідно впорядкувати за спадінням чисельності
+населення країн.
+
+
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (?country as ?country) (str(?population) as ?population)
+WHERE {
+?x a dbo:Country.
+?x dbo:timeZone dbr:Eastern_European_Time.
+?x dbo:populationTotal ?population.
+?x dbp:commonName ?country.
+} ORDER BY DESC(xsd:integer(?population))

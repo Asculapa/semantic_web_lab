@@ -1,0 +1,62 @@
+3. Напишіть SPARQL запити, щоб дізнатися:
+
+
+
+- усіх лауреатів Нобелівської премії з фізики в порядку від найстаршого до
+наймолодшого;
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT (str(?name) as ?Name), (str(?birth) as ?BirthDate) WHERE {
+?x dbo:award dbr:Nobel_Prize_in_Physics.
+?x dbo:birthDate ?birth.
+?x dbo:birthName ?name
+} order by ?birth
+
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+- 10 найкращих університетів із найбільшою кількістю лауреатів Нобелівської премії
+з фізики;
+
+SELECT (str(?university) as ?University), (count(distinct ?name) as ?Count) WHERE {
+?x dbo:award dbr:Nobel_Prize_in_Physics.
+?x dbo:birthDate ?birth.
+?x dbo:birthName ?name.
+?x dbo:almaMater ?u.
+?u dbp:name ?university
+} order by DESC(?Count) Limit 10
+
+
+SELECT (str(?university) as ?University), (?name as ?name) WHERE {
+?x dbo:award dbr:Nobel_Prize_in_Physics.
+?x dbo:birthDate ?birth.
+?x dbo:birthName ?name.
+?x dbo:almaMater ?u.
+?u dbp:name ?university
+}
+
+- кількість лауреатів Нобелівської премії з фізики, які є іммігрантами (народилися в
+країні, відмінній від країни університету)
+
+SELECT (COUNT(*) AS ?count) WHERE {
+?x dbo:award dbr:Nobel_Prize_in_Physics.
+?x foaf:name ?name.
+
+OPTIONAL {
+?x dbo:birthPlace ?birthPlace.
+}
+
+?x dbo:almaMater ?u.
+ ?u dbo:country ?c.
+ ?u dbo:country ?universityPlace
+FILTER (!CONTAINS(str(?birthPlace), str(?universityPlace)))
+}
